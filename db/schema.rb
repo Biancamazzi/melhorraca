@@ -28,10 +28,6 @@ ActiveRecord::Schema.define(version: 2022_05_28_182728) do
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
 
-  add_foreign_key "questions", "quizzes"
-  add_foreign_key "quizzes", "users"
-ActiveRecord::Schema.define(version: 2022_05_28_183024) do
-
   create_table "answers", force: :cascade do |t|
     t.text "answer"
     t.integer "user_id", null: false
@@ -44,4 +40,6 @@ ActiveRecord::Schema.define(version: 2022_05_28_183024) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "answers", "users"
+  add_foreign_key "questions", "quizzes"
+  add_foreign_key "quizzes", "users"
 end
