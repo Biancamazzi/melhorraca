@@ -10,16 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_28_193021) do
+ActiveRecord::Schema.define(version: 2022_06_01_001125) do
 
   create_table "answers", force: :cascade do |t|
-    t.text "answer"
-    t.integer "user_id", null: false
     t.integer "question_id", null: false
+    t.boolean "answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
-    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
+
+  create_table "infos", force: :cascade do |t|
+    t.string "dog_description"
+    t.string "dog_name"
+    t.string "photo_url"
+    t.string "kennel_name"
+    t.string "kennel_owner"
+    t.float "grooming_frequency_value"
+    t.float "shedding_value"
+    t.float "energy_level_value"
+    t.float "trainability_value"
+    t.float "demeanor_value"
+    t.string "size"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "questions", force: :cascade do |t|
@@ -38,6 +52,15 @@ ActiveRecord::Schema.define(version: 2022_05_28_193021) do
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
 
+  create_table "results", force: :cascade do |t|
+    t.integer "quiz_id", null: false
+    t.integer "info_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["info_id"], name: "index_results_on_info_id"
+    t.index ["quiz_id"], name: "index_results_on_quiz_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -51,7 +74,8 @@ ActiveRecord::Schema.define(version: 2022_05_28_193021) do
   end
 
   add_foreign_key "answers", "questions"
-  add_foreign_key "answers", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "users"
+  add_foreign_key "results", "infos"
+  add_foreign_key "results", "quizzes"
 end
