@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  question: one
-  answer: false
+  quiz: one
+  info: one
 
 two:
-  question: two
-  answer: false
+  quiz: two
+  info: two
