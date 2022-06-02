@@ -1,0 +1,67 @@
+// Specific CSS for your home-page
+body {
+  background-image: linear-gradient(to bottom right, #7afbfd , $white);
+}
+.container-fluid {
+  height: 110vh;
+  background-color: transparent;
+}
+
+.first-banner {
+  // background-image: asset-url('homebanner1.jpg');
+  // o efeito no fundo nao esta responsivo, ver como fazer em css
+  background-size: cover;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.first-section {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+    h1 {
+      color: #403e61;
+      font-size: 72px;
+      font-weight: 700;
+    }
+    h4 {
+      color: #605e89;
+    }
+
+}
+
+.first-section-img {
+  // background-image: asset-url('homebanner1.jpg');
+  // background-size: auto;
+  background-color: transparent;
+  margin-top: 100px;
+  align-content: center;
+  justify-content: center;
+
+}
+.logo-banner {
+  display: flex;
+  justify-items: flex-start;
+}
+
+.home-logo {
+  font-size: 24px;
+  position: absolute;
+  top: 60px;
+  display: inline-block;
+}
+
+.quiz-start-btn {
+  color: #8e8cb7;
+  text-decoration: none;
+  background-color: #403e61;
+}
+
+.quiz-start-btn:hover {
+  color: #403e61;
+  background-color: #8e8cb7;
+}
