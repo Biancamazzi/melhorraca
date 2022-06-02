@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
 body {
+  height: 2500px;
   background-image: linear-gradient(to bottom right, #7afbfd , $white);
 }
 .container-fluid {
@@ -52,6 +53,7 @@ body {
   font-size: 24px;
   position: absolute;
   top: 60px;
+  left: 60px;
   display: inline-block;
 }
 
@@ -64,4 +66,40 @@ body {
 .quiz-start-btn:hover {
   color: #403e61;
   background-color: #8e8cb7;
+}
+
+.second-section {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+    h1 {
+      color: #403e61;
+      font-size: 72px;
+      font-weight: 700;
+    }
+    h4 {
+      color: #605e89;
+    }
+}
+
+.third-section {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+    h1 {
+      color: #403e61;
+      font-size: 72px;
+      font-weight: 700;
+    }
+    h4 {
+      color: #605e89;
+    }
 }
