@@ -17,4 +17,11 @@
 <div class="tinder--buttons">
   <button id="nope"><i class="fa fa-remove"></i></button>
   <button id="love"><i class="fa fa-heart"></i></button>
+  <%= button_to questions_decline_path,class:"nope" do %>
+                <i class="fa fa-remove"></i>
+                <% end %>
+ <%= button_to questions_aprove_path,class:"love", method: :create do %>
+                <i class="fa fa-heart"></i>
+                <% end %>
+
 </div>
