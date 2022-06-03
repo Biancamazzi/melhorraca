@@ -4,7 +4,7 @@
       <div class="tinder--cards">
         <% @questions.each do |question|%>
           <div class="tinder--card">
-            <img src="https://placeimg.com/600/300/people">
+            <%= image_tag question.photourl%>
             <h3>Titulo</h3>
             <p><%= question.description%> </p>
           </div>
@@ -23,5 +23,4 @@
  <%= button_to questions_aprove_path,class:"love", method: :create do %>
                 <i class="fa fa-heart"></i>
                 <% end %>
-
 </div>
