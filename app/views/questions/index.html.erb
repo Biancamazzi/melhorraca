@@ -2,36 +2,13 @@
   <div class="row">
     <div class="col-4">
       <div class="tinder--cards">
-        <div class="tinder--card">
-          <img src="https://placeimg.com/600/300/people">
-          <h3>Demo card 1</h3>
-          <p>Question 1</p>
-          <p>É importante pra voce que o cachorro se adapte bem com outros cachorros e pessoas?</p>
-        </div>
-        <div class="tinder--card">
-          <img src="https://placeimg.com/600/300/animals">
-          <h3>Demo card 2</h3>
-          <p>Question 2</p>
-          <p>Voce pode tosar e/ou escovar o seu cachorro com frequencia?</p>
-        </div>
-        <div class="tinder--card">
-          <img src="https://placeimg.com/600/300/nature">
-          <h3>Demo card 3</h3>
-          <p>Question 3</p>
-          <p>Troca de pelo frequente te incomoda?</p>
-        </div>
-        <div class="tinder--card">
-          <img src="https://placeimg.com/600/300/tech">
-          <h3>Demo card 4</h3>
-          <p>Question 4</p>
-          <p>Voce tem tempo disponivel para brincar e passear?</p>
-        </div>
-        <div class="tinder--card">
-          <img src="https://placeimg.com/600/300/arch">
-          <h3>Demo card 5</h3>
-          <p>Question 5</p>
-          <p>Facilidade para treinamento é algo importante pra voce?</p>
-        </div>
+        <% @questions.each do |question|%>
+          <div class="tinder--card">
+            <img src="https://placeimg.com/600/300/people">
+            <h3>Titulo</h3>
+            <p><%= question.description%> </p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

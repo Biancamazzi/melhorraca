@@ -5,19 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-=begin
+  Quiz.all.destroy_all
+  Question.all.destroy_all
+  Quiz.create(user_id: User.first.id, description: "Quiz 1")
   # Create - Questions
-  questions = Question.create([
-  { description: "Voce pode tosar e/ou escovar o seu cachorro com que frequencia?" },
+  Question.create(
+  quiz_id: Quiz.first.id, description: "Voce pode tosar e/ou escovar o seu cachorro com que frequencia?")
   # true == >= 5 (grooming_frequency_value)
-  { description: "Troca de pelo frequente de incomoda? " },
+  Question.create(
+  quiz_id: Quiz.first.id, description: "Troca de pelo frequente de incomoda? ")
   # true == <= 4 (shedding_value)
-  { description: "Voce tem tempo disponivel para brincar e passear com seu novo amigo?" },
+  Question.create(
+   quiz_id: Quiz.first.id, description: "Voce tem tempo disponivel para brincar e passear com seu novo amigo?")
   # true == >= 5 (energy_level_value)
-  { description: "Facilidade para treinamento é algo muito relevante pra voce?" },
+  Question.create(
+  quiz_id: Quiz.first.id, description: "Facilidade para treinamento é algo muito relevante pra voce?")
   # true == >= (trainability_value)
-  { description: "É muito importante pra voce que o cachorro se adapte bem com outros cachorros e pessoas fora do circulo familar?" },
+  Question.create(
+  quiz_id: Quiz.first.id,  description: "É muito importante pra voce que o cachorro se adapte bem com outros cachorros e pessoas fora do circulo familar?")
   # true == >= 5 (demeanor_value)
-  ])
- =end
+
+
