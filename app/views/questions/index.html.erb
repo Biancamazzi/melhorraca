@@ -14,15 +14,16 @@
   </div>
 </div>
 
+<% q = [1..8] %>
 <div class="tinder--buttons">
- <button>
-      <%= link_to questions_decline_path, id:"nope", method: :create do %>
+<form action=<%="questions/approve/#{q}"%> method="post">
+ <button id="nope">
       <i class="fa fa-times"></i>
-                <% end %>
   </button>
-<button>
- <%= link_to questions_approve_path, id:"love", method: :create do %>
-                <i class="fa fa-heart"></i>
-                <% end %>
+</form>
+<form action="questions/approve/2" method="post">
+  <button id="love">
+      <i class="fa fa-heart"></i>
  </button>
+ </form>
 </div>

@@ -83,8 +83,7 @@ const runSlides = () => {
       card.classList.add('removed');
 
       let url = ''
-      console.log("========================")
-      console.log(currentQuestion)
+
       if (love) {
         url = `/questions/approve/${currentQuestion}`
         card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
