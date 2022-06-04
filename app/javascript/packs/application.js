@@ -12,6 +12,8 @@ require("@fortawesome/fontawesome-free")
 
 import { runSlides } from "./plugins/questions"
 
+// console.log("Hello from app/javascript/packs/application.js!");
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
