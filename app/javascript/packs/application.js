@@ -8,6 +8,14 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/init_typewrite';
 
 
+
+/////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////
+
+
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
