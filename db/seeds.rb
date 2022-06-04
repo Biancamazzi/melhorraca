@@ -3,8 +3,6 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
   Quiz.all.destroy_all
   Question.all.destroy_all
   Quiz.create(user_id: User.first.id, description: "Quiz 1")
@@ -33,4 +31,23 @@
   Question.create(
   quiz_id: Quiz.first.id,  description: "Voce gostaria de ter uma raca grande?", photourl:"https://i.postimg.cc/P52HsjSx/raca-grande.jpg" )
   # true == size == grande
+
+  # seed with CSV file for info mode
+
+ require 'csv'
+  CSV.foreach('lib/seeds/infodotnew.csv', headers: true, encoding: "iso-8859-1:utf-8", col_sep: ';') do |row|
+  Info.create(
+    dog_name: row['dog_name'],
+    dog_description: row['dog_description'],
+    photo_url: row['photo_url'],
+    grooming_frequency_value: row['grooming_frequency_value'],
+    shedding_value: row['shedding_value'],
+    energy_level_value: row['energy_level_value'],
+    trainability_value: row['trainability_value'],
+    demeanor_value: row['demeanor_value'],
+    size: row['size'],
+    kennel_name: row['kennel_name'],
+    kennel_owner: row['kennel_owner'],
+  )
+end
 
