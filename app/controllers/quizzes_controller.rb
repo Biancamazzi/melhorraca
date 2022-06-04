@@ -12,6 +12,6 @@ class QuizzesController < ApplicationController
 
   private
   def quiz_params
-    params.require(:review).permit(:description, :user_id)
+    params.require(:quiz).permit(:description, :user_id)
   end
 end
