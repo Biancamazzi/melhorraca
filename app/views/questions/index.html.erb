@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="tinder--cards">
+        <% @questions.each do |question|%>
+          <div class="tinder--card">
+            <%= image_tag question.photourl%>
+            <h3>Titulo</h3>
+            <p><%= question.description%> </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tinder--buttons">
+ <button>
+      <%= link_to questions_decline_path, id:"nope", method: :create do %>
+      <i class="fa fa-times"></i>
+                <% end %>
+  </button>
+<button>
+ <%= link_to questions_approve_path, id:"love", method: :create do %>
+                <i class="fa fa-heart"></i>
+                <% end %>
+ </button>
+</div>
