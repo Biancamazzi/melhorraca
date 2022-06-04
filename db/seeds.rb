@@ -5,7 +5,7 @@
 #
   Quiz.all.destroy_all
   Question.all.destroy_all
-  Quiz.create(user_id: User.first.id, description: "Quiz 1")
+  Quiz.create(user_id: current_user.id, description: "Quiz 1")
   # Create - Questions
   Question.create(
   quiz_id: Quiz.first.id, description: "Você pode tosar e/ou escovar o seu cachorro com frequência?", photourl: "https://images.unsplash.com/photo-1527526029430-319f10814151?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")
