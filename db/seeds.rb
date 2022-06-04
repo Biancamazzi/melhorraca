@@ -35,7 +35,7 @@
   # seed with CSV file for info mode
 
  require 'csv'
-  CSV.foreach('lib/seeds/infodotnew.csv', headers: true, encoding: "iso-8859-1:utf-8", col_sep: ';') do |row|
+  CSV.foreach('lib/seeds/infodotnew2csv.csv', headers: true, encoding: "UTF-8", col_sep: ';') do |row|
   Info.create(
     dog_name: row['dog_name'],
     dog_description: row['dog_description'],
