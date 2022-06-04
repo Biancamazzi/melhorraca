@@ -82,6 +82,8 @@ const runSlides = () => {
 
       card.classList.add('removed');
 
+      let url = ''
+
       if (love) {
         card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
       } else {

@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :quizzes, only: [:create, :show]
   resources :results, only: [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :questions, only: [:index]
-  post "questions/approve", to: "questions#approve"
-  post "questions/decline", to: "questions#decline"
+  resources :questions, only: [:index, :show]
+  post "questions/approve/:id", to: "questions#approve"
+  post "questions/decline/:id", to: "questions#decline"
 
 end
