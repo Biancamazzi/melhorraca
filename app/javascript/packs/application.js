@@ -11,6 +11,8 @@ import * as ActiveStorage from "@rails/activestorage"
 require("@fortawesome/fontawesome-free")
 
 import { runSlides } from "./plugins/questions"
+import "channels"
+import "controllers"
 
 // console.log("Hello from app/javascript/packs/application.js!");
 
