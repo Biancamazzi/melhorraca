@@ -8,14 +8,11 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/init_typewrite';
 
 
-
 /////////////////////////////////////////////////////////////////////
 
 // scrollFooter() create function to verify scroll position and thus hide the footer.
 function scrollFooter(scrollY, heightFooter)
 {
-  console.log(heightFooter)
-  console.log(scrollY)
 	if(scrollY >= heightFooter)
 	{
 		$('footer').css({
