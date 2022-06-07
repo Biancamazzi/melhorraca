@@ -50,4 +50,3 @@
     kennel_owner: row['kennel_owner'],
   )
 end
-
