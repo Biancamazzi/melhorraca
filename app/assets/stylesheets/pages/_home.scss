@@ -1,7 +1,19 @@
 // Specific CSS for your home-page
 
+.main-section, .second-main-section, .last-main-section {
+  h2 {
+    color: #54436B;
+    text-shadow: #50CB93 1px 2px;
+  }
+  p {
+    color: #646867;
+    text-shadow: #9dffd3 0.5px 0.5px;
+  }
+}
 
 #typed-effect02 {
+  color: #54436B;
+  text-shadow: #9dffd3 1px 2px;
   position: relative;
   top: -80px;
   color: $white;
@@ -50,7 +62,7 @@
 }
 
 
-/* Inserting style for basic layout structure. */
+/* Inserting style for basic layout */
 header {
 	width: 100%;
 	height: 100%;
@@ -79,12 +91,8 @@ footer {
     }
 }
 
-.footer-links a:hover {
-  opacity: 1;
-}
-
-.end-of-page {
-  padding: 10px !important;
+.footer a:hover {
+  opacity: 0.1;
 }
 
 .fa-heart {
@@ -94,14 +102,15 @@ footer {
 ///////////////////////////////////////
 
 .content {
-	background: $white;
+  background-image: radial-gradient($white 60%, #ddf8ee 25%);
+	// background: $white;
 	position: relative;
 	z-index: 1;
 }
 
 .wrapper-parallax {
 	margin-top: 100%;
-	margin-bottom: 300px;
+	margin-bottom: 280px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -120,3 +129,13 @@ header, footer, #scroll-animate-main {
 	-moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
 	transition-timing-function: cubic-bezier(0, 0, 0, 1);
 }
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
