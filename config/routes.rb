@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :show]
   post "questions/approve/:id", to: "questions#approve"
   post "questions/decline/:id", to: "questions#decline"
-
+  post "home/create_quiz", to:"pages#create_quiz"
 end
