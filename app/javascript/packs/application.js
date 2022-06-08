@@ -8,6 +8,14 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/init_typewrite';
 
 
+/////////////////////////////////////////////////////////////////////
+
+// scrollFooter() create function to verify scroll position and thus hide the footer.
+
+
+///////////////////////////////////////////////////////////////////////
+
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
