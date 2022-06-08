@@ -54,7 +54,7 @@ class ResultsController < ApplicationController
 
       # question 6
       # if question id == 6 || 7 || 8 true
-      # result = Info.select{|i| i['size'] == 'pequeno' || i['size'] == 'grande' || i['size'] == 'medio'}
+      # result = Info.where{|i| i['size'] == 'pequeno' && i['size'] == 'grande'  || i['size'] == 'grande' || i['size'] == 'medio'}
       # else
   end
 
