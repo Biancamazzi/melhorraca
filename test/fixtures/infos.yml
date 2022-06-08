@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dog_description: MyString
+  dog_name: MyString
+  photo_url: MyString
+  kennel_name: MyString
+  kennel_owner: MyString
+  grooming_frequency_value: 1.5
+  shedding_value: 1.5
+  energy_level_value: 1.5
+  trainability_value: 1.5
+  demeanor_value: 1.5
+  size: MyString
+
+two:
+  dog_description: MyString
+  dog_name: MyString
+  photo_url: MyString
+  kennel_name: MyString
+  kennel_owner: MyString
+  grooming_frequency_value: 1.5
+  shedding_value: 1.5
+  energy_level_value: 1.5
+  trainability_value: 1.5
+  demeanor_value: 1.5
+  size: MyString

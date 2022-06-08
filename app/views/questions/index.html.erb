@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="tinder--cards">
+        <% @questions.each do |question|%>
+          <div class="tinder--card">
+            <%= image_tag question.photourl%>
+            <h3>Titulo</h3>
+            <p><%= question.description%> </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% q = [1..8] %>
+<div class="tinder--buttons">
+<form action=<%="questions/approve/#{q}"%> method="post">
+ <button id="nope">
+      <i class="fa fa-times"></i>
+  </button>
+</form>
+<form action="questions/approve/2" method="post">
+  <button id="love">
+      <i class="fa fa-heart"></i>
+ </button>
+ </form>
+</div>
