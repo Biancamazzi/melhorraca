@@ -1,5 +1,16 @@
 // Specific CSS for your home-page
 
+body {
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: #54436B;
+  justify-content: space-around;
+}
+
 .main-section, .second-main-section, .last-main-section {
   h2 {
     color: #54436B;
@@ -9,16 +20,6 @@
     color: #646867;
     text-shadow: #9dffd3 0.5px 0.5px;
   }
-}
-
-#typed-effect02 {
-  color: #54436B;
-  text-shadow: #9dffd3 1px 2px;
-  position: relative;
-  top: -80px;
-  color: $white;
-  padding-left: 60px;
-  margin-bottom: 50px;
 }
 
 .start-now-btn {
@@ -32,103 +33,109 @@
   background-color: #9771c8;
 }
 
+.last-main-section {
+  padding-bottom: 40px;
+}
+
+.content {
+  background-image: radial-gradient($white 60%, #ddf8ee 25%);
+
+  width: 100%;
+  height: 100%;
+
+}
+
 
 
 
 /* Inserting style for smooth scrolling. */
-#scroll-animate {
-	overflow: hidden;
-}
+// #scroll-animate {
+// 	overflow: hidden;
+// }
 
-#scroll-animate-main {
-	width: 100%;
-	left: 0;
-	position: fixed;
-}
+// #scroll-animate-main {
+// 	width: auto;
+// 	left: 0;
+//   position: fixed;
+// }
 
-#heightPage, #heightScroll {
-	width: 10px;
-	top: 0;
-	position: absolute;
-	z-index: 99;
-}
+// #heightPage, #heightScroll {
+// 	width: 10px;
+// 	top: 0;
+// 	position: absolute;
+// 	z-index: 99;
+// }
 
-#heightPage {
-	left: 0;
-}
+// #heightPage {
+// 	left: 0;
+// }
 
-#heightScroll {
-	right: 0;
-}
+// #heightScroll {
+// 	right: 0;
+// }
 
 
 /* Inserting style for basic layout */
-header {
-	width: 100%;
-	height: 100%;
-	background: asset-url('header02.jpg') no-repeat 50% 50%;
-	top: 0;
-	position: fixed;
-	z-index: -1;
-  background-position: center;
-  background-size: cover;
-}
+// header {
+// 	width: 100%;
+// 	height: 100%;
+// 	background: asset-url('header02.jpg') no-repeat 50% 50%;
+// 	top: 0;
+// 	position: fixed;
+// 	z-index: -1;
+//   background-position: center;
+//   background-size: cover;
+// }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+// footer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
 
 
-	width: 100%;
-	height: 280px;
-	background: #54436B;
-	bottom: -300px;
-	position: fixed;
-	z-index: -1;
-    p {
-      color: #50CB93;
-    }
-}
+// 	width: 100%;
+// 	height: 220px;
+// 	background: #54436B;
+// 	bottom: -300px;
+// 	position: fixed;
+// 	z-index: -1;
+//     p {
+//       color: #50CB93;
+//     }
+// }
 
-.footer a:hover {
-  opacity: 0.1;
-}
+// .footer a:hover {
+//   opacity: 0.1;
+// }
 
-.fa-heart {
-  color: #D23333;
-}
+// .fa-heart {
+//   color: #D23333;
+// }
 
 ///////////////////////////////////////
 
-.content {
-  background-image: radial-gradient($white 60%, #ddf8ee 25%);
-	// background: $white;
-	position: relative;
-	z-index: 1;
-}
 
-.wrapper-parallax {
-	margin-top: 100%;
-	margin-bottom: 280px;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
+
+// .wrapper-parallax {
+// 	margin-top: 0;
+// 	margin-bottom: 0;
+// }
 
 
 /* Inserting style animations for layout. */
-header, footer, #scroll-animate-main {
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	transition-property: all;
+// footer, #scroll-animate-main {
+// 	-webkit-transition-property: all;
+// 	-moz-transition-property: all;
+// 	transition-property: all;
 
-	-webkit-transition-duration: 0.4s;
-	-moz-transition-duration: 0.4s;
-	transition-duration: 0.4s;
+// 	-webkit-transition-duration: 0.4s;
+// 	-moz-transition-duration: 0.4s;
+// 	transition-duration: 0.4s;
 
-	-webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-	-moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-	transition-timing-function: cubic-bezier(0, 0, 0, 1);
-}
+// 	-webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+// 	-moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+// 	transition-timing-function: cubic-bezier(0, 0, 0, 1);
+// }
 
 
 
