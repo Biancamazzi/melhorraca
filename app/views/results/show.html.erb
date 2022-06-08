@@ -17,4 +17,23 @@
       <%=@result.info.kennel_owner%>
       </div>
   </div>
+  <div> QUERY</div>
+  <% case Answer %>
+   <% when question1 = Answer.where(user_id:current_user.id).where(question_id:1) %>
+    <% if question1.first.answer == true %>
+      <% result = Info.select{|i| i['grooming_frequency_value'] >= 0.5} %>
+      <div>if<%=result.count%></div>
+    <% else %>
+      <% result = Info.select{|i| i['grooming_frequency_value'] < 0.5} %>
+      <div>else<%=result.count%></div>
+    <% end%>
+    <div>1<%=result.count%></div>
+    <% when question2 = Answer.where(user_id:current_user.id).where(question_id:2) %>
+      <% if question2.first.answer == true %>
+        <% result = Info.select{|i| i['shedding_value'] <= 0.4} %>
+      <% else %>
+        <% result = Info.select{|i| i['shedding_value'] > 0.4} %>
+    <% end %>
+    <div>2<%=result.count%></div>
+  <%end%>
 </div>
