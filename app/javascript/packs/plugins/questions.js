@@ -6,8 +6,6 @@ const runSlides = () => {
   var allCards = document.querySelectorAll('.tinder--card');
   var nope = document.getElementById('nope');
   var love = document.getElementById('love');
-  console.log(tinderContainer);
-  console.log(nope);
 
   function initCards(card, index) {
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -71,6 +69,8 @@ const runSlides = () => {
     });
   });
 
+  let currentQuestion = 1
+
   function createButtonListener(love) {
     return function (event) {
       var cards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -82,11 +82,24 @@ const runSlides = () => {
 
       card.classList.add('removed');
 
+      let url = ''
+
       if (love) {
+        url = `/questions/approve/${currentQuestion}`
         card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
       } else {
+        url = `/questions/decline/${currentQuestion}`
         card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
       }
+
+      currentQuestion = currentQuestion + 1
+
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
 
       initCards();
 
