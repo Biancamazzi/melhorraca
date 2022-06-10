@@ -1,20 +1,21 @@
-<div class="container">
-<h1>Raça</h1>
-  photo: <%=@result.info.photo_url%>
-  <div>
-    <div class="fw-bold">name:</div>
-     <%=@result.info.dog_name%>
-    <div>
-      <div class="fw-bold">description:</div>
-      <%=@result.info.dog_description%>
+<div class="container results-container">
+  <h1 class="breed-title"><%=@result.info.dog_name%></h1>
+  <div class="breed-information">
+    <div class="result-img">
+    <%= image_tag @result.info.photo_url%>
     </div>
-  </div>
-  <div>
-    <div class="fw-bold">kannel:</div>
-   <%=@result.info.kennel_name%>
+    <div class="breed-description">
+      <%=@result.info.dog_description%>
+      <br />
     <div>
-      <div class="fw-bold">kennel owner:</div>
-      <%=@result.info.kennel_owner%>
+      <div class="fw-bold">Canil recomendado:</div>
+        <%=@result.info.kennel_name%>
+      <div>
+        <div class="fw-bold">Contato do canil:</div>
+        <%=@result.info.kennel_owner%>
+        </div>
       </div>
-  </div>
+    </div>
+    </div>
+
 </div>

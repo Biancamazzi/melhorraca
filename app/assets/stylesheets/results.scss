@@ -1,3 +1,23 @@
 // Place all the styles related to the Results controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.breed-title{
+  text-align:center;
+  margin-top:50px;
+  margin-bottom:30px;
+}
+
+.breed-information{
+  display: flex;
+  margin-top: 30px;
+}
+
+.breed-description{
+  margin-left: 10px;
+}
+
+.result-img img{
+  width: 800px;
+  border-radius: 10px;
+}
