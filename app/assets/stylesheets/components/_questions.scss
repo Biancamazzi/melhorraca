@@ -162,16 +162,16 @@ h3, p {
 }
 
 .tinder--card h3 {
-  margin-top: 32px;
+  margin-top: 20px;
   font-size: 32px;
   padding: 0 16px;
   pointer-events: none;
 }
 
 .tinder--card p {
-  margin-top: 24px;
+  margin-top: -3px;
   font-size: 20px;
-  padding: 0 16px;
+  padding: 0;
   pointer-events: none;
 }
 
@@ -179,7 +179,7 @@ h3, p {
   flex: 0 0 100px;
   text-align: center;
   position: relative;
-  top: 460px;
+  top: 450px;
   display: flex;
   place-content: center;
 
