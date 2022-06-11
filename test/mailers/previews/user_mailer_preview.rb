@@ -6,5 +6,4 @@ class UserMailerPreview < ActionMailer::Preview
     user = User.first
     UserMailer.with(user: user).infos
   end
-
 end
