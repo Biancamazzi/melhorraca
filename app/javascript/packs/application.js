@@ -13,7 +13,7 @@ require("@fortawesome/fontawesome-free")
 import { runSlides } from "./plugins/questions"
 import "channels"
 import "controllers"
-
+import "bootstrap"
 // console.log("Hello from app/javascript/packs/application.js!");
 
 Rails.start()
