@@ -1,3 +1,116 @@
 // Place all the styles related to the Results controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.layout_padding {
+  padding-top: 90px;
+}
+.p-relative {
+  position: relative;
+}
+
+.p-relative.r-left img {
+  float: left;
+}
+
+.p-relative.r-left .back_blog::after {
+  left: -50px;
+  top: -65px;
+}
+
+.p-relative.r-left .back_blog::after {
+  left: -50px;
+  top: -65px;
+}
+
+.full {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.back_blog::after {
+  width: 545px;
+  position: absolute;
+  height: 575px;
+  content: "";
+  right: -50px;
+  top: -65px;
+  box-shadow: 0 0 60px -10px rgba(0,0,0,.15);
+  background:
+  #50CB93;
+}
+
+.back_blog img {
+  position: relative;
+  z-index: 1;
+}
+
+.back_blog img {
+  width: auto;
+  float: right;
+}
+
+.back_blog {
+  margin-bottom: 50px;
+}
+
+.padding_right_left_15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.padding_right_left_15 {
+  margin: 20px 0;
+}
+
+.padding_right_left_15 {
+  background: #54436B;
+  padding: 30px 35px;
+  margin: 0 0 30px 0;
+}
+
+.heading_s1 h3 {
+  font-size: 52px;
+  color:#9771c8;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 40px;
+}
+
+.heading_s1 p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: -10px;
+  line-height: 22px;
+}
+
+.breed-title{
+  text-align:center;
+  margin-top:50px;
+  margin-bottom:30px;
+}
+
+.breed-information{
+  display: flex;
+  margin-top: 30px;
+}
+
+.breed-description{
+  margin-left: 10px;
+}
+
+.result-img img{
+  width: 600px;
+  border-radius: 3px;
+  z-index: 1;
+}
