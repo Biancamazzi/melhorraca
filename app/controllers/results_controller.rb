@@ -2,9 +2,17 @@ class ResultsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
+
+    @quiz = Quiz.last.id
+    @info = Info.last.id
+    @result.quiz = @quiz
+    @result.info = @info
     @result = Result.new(result_params)
+    @result.user = current_user
+
     @result.save
     redirect_to result_path(@result)
+
 
   end
 
@@ -14,7 +22,7 @@ class ResultsController < ApplicationController
 
   private
   def result_params
-    params.require(:result).permit(:quiz_id, :info_id, :user_id)
+    params.permit(:quiz_id, :info_id, :user_id)
   end
 
   def filter
@@ -26,6 +34,14 @@ class ResultsController < ApplicationController
     question6 = Answer.where(user_id: current_user.id).where(question_id: 6).last.answer
     question7 = Answer.where(user_id: current_user.id).where(question_id: 7).last.answer
     question8 = Answer.where(user_id: current_user.id).where(question_id: 8).last.answer
+    # question1 = Answer.where(user_id: 1).where(question_id: 1).last.answer
+    # question2 = Answer.where(user_id: 1).where(question_id: 2).last.answer
+    # question3 = Answer.where(user_id: 1).where(question_id: 3).last.answer
+    # question4 = Answer.where(user_id: 1).where(question_id: 4).last.answer
+    # question5 = Answer.where(user_id: 1).where(question_id: 5).last.answer
+    # question6 = Answer.where(user_id: 1).where(question_id: 6).last.answer
+    # question7 = Answer.where(user_id: 1).where(question_id: 7).last.answer
+    # question8 = Answer.where(user_id: 1).where(question_id: 8).last.answer
     if question1 == true
       result = Info.select {|i| i['grooming_frequency_value'] >= 0.5}
     else
