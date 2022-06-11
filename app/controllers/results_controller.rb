@@ -3,17 +3,17 @@ class ResultsController < ApplicationController
 
   def create
 
-    @quiz = Quiz.last.id
-    @info = Info.last.id
+    @result = Result.new(result_params)
+    @quiz = Quiz.last
+    @info = Info.last
     @result.quiz = @quiz
     @result.info = @info
-    @result = Result.new(result_params)
     @result.user = current_user
 
-    @result.save
-    redirect_to result_path(@result)
-
-
+    if @result.save
+      redirect_to result_path(@result)
+    raise
+    end
   end
 
   def show
