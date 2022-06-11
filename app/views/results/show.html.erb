@@ -1,39 +1,27 @@
-<div class="container">
-<h1>Raça</h1>
-  photo: <%=@result.info.photo_url%>
-  <div>
-    <div class="fw-bold">name:</div>
-     <%=@result.info.dog_name%>
-    <div>
-      <div class="fw-bold">description:</div>
-      <%=@result.info.dog_description%>
+<section class="layout_padding about_section">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+              <div class="row">
+                <div class="col-md-7 p-relative r-left">
+                    <div class="full back_blog text_align_center padding_right_left_15 result-img">
+                      <%= image_tag @result.info.photo_url%>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="full heading_s1">
+                    <h3><%=@result.info.dog_name%></h3>
+                    <p><%=@result.info.dog_description%></p>
+                    <p>Canil recomendado:
+                      <%=@result.info.kennel_name%></p>
+                    <p>Contato do canil:
+                      <%=@result.info.kennel_owner%></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
     </div>
   </div>
-  <div>
-    <div class="fw-bold">kannel:</div>
-   <%=@result.info.kennel_name%>
-    <div>
-      <div class="fw-bold">kennel owner:</div>
-      <%=@result.info.kennel_owner%>
-      </div>
-  </div>
-  <div> QUERY</div>
-  <% case Answer %>
-   <% when question1 = Answer.where(user_id:current_user.id).where(question_id:1) %>
-    <% if question1.first.answer == true %>
-      <% result = Info.select{|i| i['grooming_frequency_value'] >= 0.5} %>
-      <div>if<%=result.count%></div>
-    <% else %>
-      <% result = Info.select{|i| i['grooming_frequency_value'] < 0.5} %>
-      <div>else<%=result.count%></div>
-    <% end%>
-    <div>1<%=result.count%></div>
-    <% when question2 = Answer.where(user_id:current_user.id).where(question_id:2) %>
-      <% if question2.first.answer == true %>
-        <% result = Info.select{|i| i['shedding_value'] <= 0.4} %>
-      <% else %>
-        <% result = Info.select{|i| i['shedding_value'] > 0.4} %>
-    <% end %>
-    <div>2<%=result.count%></div>
-  <%end%>
-</div>
+</section>
