@@ -1,21 +1,27 @@
-<div class="container results-container">
-  <h1 class="breed-title"><%=@result.info.dog_name%></h1>
-  <div class="breed-information">
-    <div class="result-img">
-    <%= image_tag @result.info.photo_url%>
-    </div>
-    <div class="breed-description">
-      <%=@result.info.dog_description%>
-      <br />
-    <div>
-      <div class="fw-bold">Canil recomendado:</div>
-        <%=@result.info.kennel_name%>
-      <div>
-        <div class="fw-bold">Contato do canil:</div>
-        <%=@result.info.kennel_owner%>
+<section class="layout_padding about_section">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+              <div class="row">
+                <div class="col-md-7 p-relative r-left">
+                    <div class="full back_blog text_align_center padding_right_left_15 result-img">
+                      <%= image_tag @result.info.photo_url%>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="full heading_s1">
+                    <h3><%=@result.info.dog_name%></h3>
+                    <p><%=@result.info.dog_description%></p>
+                    <p>Canil recomendado:
+                      <%=@result.info.kennel_name%></p>
+                    <p>Contato do canil:
+                      <%=@result.info.kennel_owner%></p>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
-      </div>
     </div>
-    </div>
-
-</div>
+  </div>
+</section>
