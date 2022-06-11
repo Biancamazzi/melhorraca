@@ -12,7 +12,8 @@ class ResultsController < ApplicationController
 
     if @result.save
       redirect_to result_path(@result)
-    raise
+    else
+      render :new
     end
   end
 
