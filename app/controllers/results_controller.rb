@@ -1,10 +1,11 @@
 class ResultsController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def create
-    filter
     @result = Result.new(result_params)
     @result.save
     redirect_to result_path(@result)
+
   end
 
   def show
