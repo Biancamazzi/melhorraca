@@ -72,6 +72,10 @@ body {
   overflow-x: hidden;
 }
 
+h3, p {
+  color: #54436B;
+  text-shadow: #50cb93 1px 1px;
+}
 
 
 // .tinder {
@@ -125,7 +129,7 @@ body {
   text-align: center;
   justify-content: center;
   position: relative;
-  left: 240px;
+  left: 190px;
 }
 
 .tinder--card {
@@ -158,25 +162,24 @@ body {
 }
 
 .tinder--card h3 {
-  margin-top: 32px;
+  margin-top: 20px;
   font-size: 32px;
   padding: 0 16px;
   pointer-events: none;
 }
 
 .tinder--card p {
-  margin-top: 24px;
+  margin-top: -3px;
   font-size: 20px;
-  padding: 0 16px;
+  padding: 0;
   pointer-events: none;
 }
 
 .tinder--buttons {
   flex: 0 0 100px;
   text-align: center;
-  padding-top: 20px;
   position: relative;
-  top: 460px;
+  top: 450px;
   display: flex;
   place-content: center;
 
