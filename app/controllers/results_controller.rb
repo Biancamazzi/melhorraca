@@ -83,12 +83,12 @@ class ResultsController < ApplicationController
     if question2 == true
       result = result.select {|i| i['shedding_value'] <= 0.4}
     else
-      result = result.select {|i| i['shedding_value'] > 0.4}
+      result = result.select {|i| i['shedding_value'] >= 0.1}
     end
     puts result.count
 
     if question3 == true
-      result = result.select {|i| i['energy_level_value'] >= 0.5}
+      result = result.select {|i| i['energy_level_value'] >= 0.1}
     else
       result = result.select {|i| i['energy_level_value'] < 0.5}
     end
@@ -104,7 +104,7 @@ class ResultsController < ApplicationController
     if question5 == true
       result = result.select {|i| i['demeanor_value'] >= 0.5}
     else
-      result = result.select {|i| i['demeanor_value'] < 0.5}
+      result = result.select {|i| i['demeanor_value'] < 1.0}
     end
     puts result.count
     puts result.sample.id
