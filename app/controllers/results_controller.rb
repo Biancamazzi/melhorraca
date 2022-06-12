@@ -27,22 +27,22 @@ class ResultsController < ApplicationController
   end
 
   def filter
-    # question1 = Answer.where(user_id: current_user.id).where(question_id: 1).last.answer
-    # question2 = Answer.where(user_id: current_user.id).where(question_id: 2).last.answer
-    # question3 = Answer.where(user_id: current_user.id).where(question_id: 3).last.answer
-    # question4 = Answer.where(user_id: current_user.id).where(question_id: 4).last.answer
-    # question5 = Answer.where(user_id: current_user.id).where(question_id: 5).last.answer
-    # question6 = Answer.where(user_id: current_user.id).where(question_id: 6).last.answer
-    # question7 = Answer.where(user_id: current_user.id).where(question_id: 7).last.answer
-    # question8 = Answer.where(user_id: current_user.id).where(question_id: 8).last.answer
-    question1 = Answer.where(user_id: 1).where(question_id: 1).last.answer
-    question2 = Answer.where(user_id: 1).where(question_id: 2).last.answer
-    question3 = Answer.where(user_id: 1).where(question_id: 3).last.answer
-    question4 = Answer.where(user_id: 1).where(question_id: 4).last.answer
-    question5 = Answer.where(user_id: 1).where(question_id: 5).last.answer
-    question6 = Answer.where(user_id: 1).where(question_id: 6).last.answer
-    question7 = Answer.where(user_id: 1).where(question_id: 7).last.answer
-    question8 = Answer.where(user_id: 1).where(question_id: 8).last.answer
+    question1 = Answer.where(user_id: current_user.id).where(question_id: 1).last.answer
+    question2 = Answer.where(user_id: current_user.id).where(question_id: 2).last.answer
+    question3 = Answer.where(user_id: current_user.id).where(question_id: 3).last.answer
+    question4 = Answer.where(user_id: current_user.id).where(question_id: 4).last.answer
+    question5 = Answer.where(user_id: current_user.id).where(question_id: 5).last.answer
+    question6 = Answer.where(user_id: current_user.id).where(question_id: 6).last.answer
+    question7 = Answer.where(user_id: current_user.id).where(question_id: 7).last.answer
+    question8 = Answer.where(user_id: current_user.id).where(question_id: 8).last.answer
+    # question1 = Answer.where(user_id: 1).where(question_id: 1).last.answer
+    # question2 = Answer.where(user_id: 1).where(question_id: 2).last.answer
+    # question3 = Answer.where(user_id: 1).where(question_id: 3).last.answer
+    # question4 = Answer.where(user_id: 1).where(question_id: 4).last.answer
+    # question5 = Answer.where(user_id: 1).where(question_id: 5).last.answer
+    # question6 = Answer.where(user_id: 1).where(question_id: 6).last.answer
+    # question7 = Answer.where(user_id: 1).where(question_id: 7).last.answer
+    # question8 = Answer.where(user_id: 1).where(question_id: 8).last.answer
      if question6 == true && question7 == true && question8 == true
       result = Info.where(size:'pequeno').or(Info.where(size:'medio').or(Info.where(size:'grande')))
       puts result.count
