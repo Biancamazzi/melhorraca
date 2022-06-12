@@ -2,10 +2,10 @@ class ResultsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
-
+    filter
     @result = Result.new(result_params)
     @quiz = Quiz.last
-    @info = Info.last
+    @info = @filtrado
     @result.quiz = @quiz
     @result.info = @info
     @result.user = current_user
@@ -108,6 +108,7 @@ class ResultsController < ApplicationController
     end
     puts result.count
     puts result.sample.id
+    @filtrado = result.sample
   end
 
 
