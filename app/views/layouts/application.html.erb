@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= yield %>
+  <%# unless controller_name == "devise/sessions#new" %>
+          <%# <%= render "shared/navbar" %>
+  <%# end %>
+  <%= yield %>
   </body>
 </html>
