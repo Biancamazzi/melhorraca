@@ -3,6 +3,7 @@ html, body {
 }
 
 .navbar-lewagon {
+  padding: 16px;
   justify-content: space-between;
   background: rgb(84,67,107);
   background: linear-gradient(90deg, rgba(84,67,107,1) 0%, rgba(117,236,182,1) 52%, rgba(80,203,147,1) 100%);
@@ -13,7 +14,7 @@ html, body {
 }
 
 .dropdown{
-  color: #54436B;
+  color: white;
 }
 
 .navbar-collapse h6 {
@@ -23,7 +24,7 @@ html, body {
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
 }
 
 a{
