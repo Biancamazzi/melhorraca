@@ -5,11 +5,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-8">
+    <div class="col-4">
       <div class="tinder--cards">
         <% @questions.each do |question|%>
           <div class="tinder--card">
             <%= image_tag question.photourl%>
+            <h3>Pergunta</h3>
             <p><%= question.description%> </p>
           </div>
         <% end %>
@@ -26,3 +27,4 @@
       <i class="fa fa-heart"></i>
  </button>
 </div>
+<form action=<%="/results"%> method="post"> <button type="submit" class="btn btn-lg px-4 me-md-2 start-now-btn">RESULTADO</button>
