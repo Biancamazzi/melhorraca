@@ -94,6 +94,10 @@ const runSlides = () => {
 
       currentQuestion = currentQuestion + 1
 
+      if (currentQuestion == 9) {
+        document.location.assign("/results");
+      }
+
       fetch(url, {
         method: 'POST',
         headers: {
