@@ -3,8 +3,8 @@ class ResultsController < ApplicationController
 
   def create
     filter
-    @result = Result.new(result_params)
-    @quiz = Quiz.last
+    @result = Result.new()
+    @quiz = current_user.quiz
     @info = @filtrado
     @result.quiz = @quiz
     @result.info = @info
@@ -22,9 +22,6 @@ class ResultsController < ApplicationController
   end
 
   private
-  def result_params
-    params.permit(:quiz_id, :info_id, :user_id)
-  end
 
   def filter
     question1 = Answer.where(user_id: current_user.id).where(question_id: 1).last.answer
