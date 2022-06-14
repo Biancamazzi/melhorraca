@@ -1,21 +1,39 @@
-<style>
 
-</style>
-
-
-<h1>Olá, <%= @user.email %></h1>
-
-<h2>Agradecemos a sua visita ao site Melhor Raça e desejamos que as informações que fornecemos possa lhe ajudar na escolha do seu amigo, no link
-abaixo seguem todas a informações:</h2>
-
-
-<br>
-<br>
-<br>
-
-<footer> Atenciosamente,
-  <br>
-  <br>Equipe Melhor Raça
-</footer>
-<p>
-</p>
+    <div class="row results-details">
+        <div class="col-md-12">
+          <div class="row">
+              <div class="row">
+                <div class="col-md-7 p-relative r-left">
+                    <div class="full back_blog text_align_center padding_right_left_15 result-img">
+                      <%# <%= image_tag @result.info.photo_url%> %>
+                    </div>
+                </div>
+                <div class="">
+                  <div>
+                    <img src="assets/images/Brussels.jpg" alt="">
+                  </div>
+                  <div class="">
+                    <h3>CHIHUAHUA</h3>
+                    <p>The Chihuahua is a balanced. graceful dog of terrier-like demeanor.
+                    weighing no more than 6 pounds. The rounded “apple” head is a breed hallmark.
+                    The erect ears and full. luminous eyes are acutely expressive. Coats come in
+                    many colors and patterns. and can be long or short. The varieties are identical
+                    except for coat.Chihuahuas possess loyalty. charm. and big-dog attitude.
+                    Even tiny dogs require training. and without it this clever scamp will rule
+                    your household like a little Napoleon. Compact and confident. Chihuahuas are
+                    ideal city pets. They are too small for roughhousing with kids. and special
+                    care must be taken in cold weather. but Chihuahuas are adaptable—as long as
+                    they get lots of quality time in their preferred lap. The Chihuahua is a tiny
+                    dog with a huge personality. A national symbol of Mexico. these alert and amusing
+                    "purse dogs" stand among the oldest breeds of the Americas. with a lineage going
+                    back to the ancient kingdoms of pre-Columbian times.</p>
+                    <p>O Canil recomendado é o:
+                      <%# <%=@result.info.kennel_name%></p>
+                    <p>Contato do canil:
+                      <%# <%=@result.info.kennel_owner%></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
