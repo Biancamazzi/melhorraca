@@ -10,5 +10,8 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/footer";
 @import "pages/index";
-@import "quizzes.scss"
+@import "quizzes";
+@import "results";
+@import "devise/userlog";

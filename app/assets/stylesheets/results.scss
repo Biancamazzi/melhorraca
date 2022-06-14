@@ -1,3 +1,279 @@
 // Place all the styles related to the Results controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@keyframes slideInBack {
+  0% {
+      transform: translateZ(1000px) scale(1);
+      opacity: 0
+  }
+  70% {
+      transform: scale(1.1);
+      opacity: 1
+  }
+  55%,
+  to {
+      transform: translateZ(0) scale(1);
+      opacity: 1
+  }
+}
+
+@keyframes firstDrop {
+    0% {
+        transform: translateZ(0);
+        opacity: 0
+    }
+    to {
+        transform: translate3d(-4px, 100%, 0);
+        opacity: 1
+    }
+}
+
+@keyframes secondDrop {
+    0% {
+        transform: translateZ(0);
+        opacity: 0
+    }
+    to {
+        transform: translate3d(-8px, 200%, 0);
+        opacity: .4
+    }
+}
+  .Animdel\(\$normal\) {
+   -webkit-animation-delay:.25s;
+   animation-delay:.25s
+  }
+
+  .Animdur\(\$slow\) {
+   -webkit-animation-duration:.5s;
+   animation-duration:.5s
+  }
+  .Animdur\(\$xslow\),
+  .Animdur\(1s\) {
+   -webkit-animation-duration:1s;
+   animation-duration:1s
+  }
+  .Animfm\(f\) {
+   -webkit-animation-fill-mode:forwards;
+   animation-fill-mode:forwards
+  }
+  .Animfm\(bo\) {
+   -webkit-animation-fill-mode:both;
+   animation-fill-mode:both
+  }
+  .Animn\(\$anim-slide-in-back\) {
+   -webkit-animation-name:slideInBack;
+   animation-name:slideInBack;
+  }
+  .Animn\(\$anim-bounce-in\) {
+   -webkit-animation-name:bounceIn;
+   animation-name:bounceIn
+  }
+
+  .Animtf\(eo\) {
+   -webkit-animation-timing-function:ease-out;
+   animation-timing-function:ease-out
+  }
+  .Animtf\(l\) {
+   -webkit-animation-timing-function:linear;
+   animation-timing-function:linear
+  }
+  .Row {
+   clear:both
+  }
+  .Mb\(8px\) {
+   margin-bottom:8px
+  }
+  .Mb\(10px\) {
+   margin-bottom:10px
+  }
+  .Mb\(52px\) {
+   margin-bottom:52px
+  }
+  .Pos\(r\){
+   position:relative
+  }
+  .Ta\(c\) {
+   text-align:center
+  }
+  .Prs\(500px\) {
+   perspective:500px
+  }
+  .Trsdu\(\$slow\) {
+   transition-duration:.5s
+  }
+  .Row {
+   width:100%
+  }
+  .Row {
+   zoom:1
+  }
+  .Row {
+   box-sizing:border-box;
+   *display:block;
+   *width:auto
+  }
+
+  @media only screen and (max-width: 767px) {
+
+   .Mb\(8px\)--s {
+    margin-bottom:8px
+   }
+   .Mb\(10px\)--s {
+    margin-bottom:10px
+   }
+   .Pos\(r\)--s {
+    position:relative
+   }
+   .Ta\(c\)--s {
+    text-align:center
+   }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1400px) {
+   .Ta\(c\)--ltxl {
+    text-align:center
+   }
+  }
+  @media only screen and (min-width: 768px) {
+   .Mb\(8px\)--ml {
+    margin-bottom:8px
+   }
+   .Pos\(r\)--ml {
+    position:relative
+   }
+   .Ta\(c\)--ml {
+    text-align:center
+   }
+  }
+@-webkit-keyframes logoAnimation {
+  50% {
+  transform:scale(1.2)
+  }
+}
+@keyframes logoAnimation {
+  50% {
+  transform:scale(1.2)
+  }
+}
+
+.body{
+  font-family:  sans-serif;
+  background-color: #f8f8f8;
+}
+
+.layout_padding {
+  padding-top: 30px;
+}
+.p-relative {
+  position: relative;
+}
+
+.p-relative.r-left img {
+  float: left;
+}
+
+.p-relative.r-left .back_blog::after {
+  left: -50px;
+  top: -65px;
+}
+
+.p-relative.r-left .back_blog::after {
+  left: -50px;
+  top: -65px;
+}
+
+.full {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.back_blog::after {
+  width: 545px;
+  position: absolute;
+  height: 575px;
+  content: "";
+  right: -50px;
+  top: -65px;
+  box-shadow: 0 0 60px -10px rgba(0,0,0,.15);
+  background:
+  #50CB93;
+}
+
+.back_blog img {
+  position: relative;
+  z-index: 1;
+}
+
+.back_blog img {
+  width: auto;
+  float: right;
+}
+
+.back_blog {
+  margin-bottom: 50px;
+}
+
+.padding_right_left_15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.padding_right_left_15 {
+  margin: 20px 0;
+}
+
+.padding_right_left_15 {
+  background: #54436B;
+  padding: 30px 35px;
+  margin: 0 0 30px 0;
+}
+
+.heading_s1 h3 {
+  font-size: 52px;
+  color:#9771c8;
+  font-family:  sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 40px;
+}
+
+.heading_s1 p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: -10px;
+  line-height: 22px;
+  color: #54436B;
+  text-shadow: none;
+}
+
+.breed-title{
+  text-align:center;
+  margin-top:50px;
+  margin-bottom:30px;
+}
+
+.breed-information{
+  display: flex;
+  margin-top: 30px;
+}
+
+.breed-description{
+  margin-left: 10px;
+}
+
+.result-img img{
+  width: 545px;
+  border-radius: 3px;
+  z-index: 1;
+}
+.results-details{
+  margin-top: 120px;
+}
+
+svg {
+  filter: drop-shadow(3px 1px 2px #141414);
+}

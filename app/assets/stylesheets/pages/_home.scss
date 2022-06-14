@@ -1,1 +1,49 @@
 // Specific CSS for your home-page
+
+body {
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: #54436B;
+  justify-content: space-around;
+}
+
+.main-section, .second-main-section, .last-main-section {
+  h2 {
+    color: #54436B;
+    text-shadow: #50CB93 1px 2px;
+  }
+  p {
+    color: #646867;
+    text-shadow: #9dffd3 0.5px 0.5px;
+  }
+}
+
+.start-now-btn {
+  margin-top: 24px;
+  background-color: #54436B;
+  color: #50CB93;
+  border-radius: 5px;
+}
+.start-now-btn:hover {
+  color: #9dffd3;
+  background-color: #9771c8;
+}
+
+.last-main-section {
+  padding-bottom: 40px;
+}
+
+.content {
+  background-image: radial-gradient($white 60%, #ddf8ee 25%);
+
+  width: 100%;
+  height: 100%;
+
+}
+i{
+  color: #ddf8ee;
+}

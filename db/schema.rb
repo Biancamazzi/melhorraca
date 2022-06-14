@@ -10,14 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_03_203928) do
+ActiveRecord::Schema.define(version: 2022_06_07_232259) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.integer "question_id", null: false
+    t.bigint "question_id", null: false
     t.boolean "answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
   create_table "infos", force: :cascade do |t|
@@ -38,7 +43,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_203928) do
 
   create_table "questions", force: :cascade do |t|
     t.text "description"
-    t.integer "quiz_id", null: false
+    t.bigint "quiz_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "photourl"
@@ -47,19 +52,21 @@ ActiveRecord::Schema.define(version: 2022_06_03_203928) do
 
   create_table "quizzes", force: :cascade do |t|
     t.text "description"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
 
   create_table "results", force: :cascade do |t|
-    t.integer "quiz_id", null: false
-    t.integer "info_id", null: false
+    t.bigint "quiz_id", null: false
+    t.bigint "info_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
     t.index ["info_id"], name: "index_results_on_info_id"
     t.index ["quiz_id"], name: "index_results_on_quiz_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,8 +82,10 @@ ActiveRecord::Schema.define(version: 2022_06_03_203928) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "users"
   add_foreign_key "results", "infos"
   add_foreign_key "results", "quizzes"
+  add_foreign_key "results", "users"
 end

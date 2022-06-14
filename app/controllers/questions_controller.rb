@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
   before_action :index, only: [:approve, :decline]
 
   def index
@@ -14,15 +14,15 @@ class QuestionsController < ApplicationController
 
   def approve
     # user swipes right
-    @quiz = Quiz.first
+    @quiz = Quiz.last
 
     # cria um yes por usuario
-    Answer.create(:question_id => params[:id], :answer => true)
+    Answer.create(:question_id => params[:id],user_id: current_user.id, :answer => true)
   end
 
   def decline
     # user swipes left
-    @quiz = Quiz.first
-    Answer.create(:question_id => params[:id], :answer => false)
+    @quiz = Quiz.last
+    Answer.create(:question_id => params[:id], user_id: current_user.id, :answer => false)
   end
 end
