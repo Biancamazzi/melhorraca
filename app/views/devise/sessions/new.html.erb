@@ -1,12 +1,12 @@
 
 
 <div class="container-fluid login-container">
-  <div class="card d-grid gap-2 col-8 col-lg-6 mx-auto">
+  <div class="card d-grid gap-2 col-10 col-lg-6 mx-auto">
     <div class="card-header">
       <h2 class="text-center">Bem vindo</h2>
     </div>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="card-body d-grid gap-2 col-8 col-lg-6 mx-auto sign-in-link">
+    <div class="card-body d-grid gap-2 col-10 col-lg-6 mx-auto sign-in-link">
       <div class="form-inputs form-group">
         <%= f.input :email,
                     required: false,
@@ -26,34 +26,4 @@
     <% end %>
 
     <%= render "devise/shared/links" %>
-</div>
-
-
-<%= render "shared/footer" %>
-
-<%# ////////////////////////////// ABAIXO NAO ESTA FUNCIONANDO OS BOTOES ///////////////////////////// %>
-
-<div class="container-fluid login-container">
-  <div class="card d-grid gap-2 col-6 mx-auto">
-    <div class="card-header">
-      <h2 class="text-center">Entrar</h2>
-    </div>
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="card-body d-grid gap-2 col-6 mx-auto sign-in-link">
-      <div class="form-inputs form-group">
-      <%= f.input :email,
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-    </div>
-      <a href="" class="btn btn-success"><%= f.button :submit, "Entrar" %></a>
-
-    </div>
-  </div>
-      <% end %>
-      <%= render "devise/shared/links" %>
 </div>
