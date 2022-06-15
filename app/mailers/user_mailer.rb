@@ -7,7 +7,8 @@ class UserMailer < ApplicationMailer
   #
   def infos
     @user = params
-
+    @result = params[:result]
+    p @result
     mail(to: @user.email, subject: 'Raça ideal do seu melhor amigo')
   end
 end
