@@ -47,83 +47,107 @@ class ResultsController < ApplicationController
 
      if question6 == true && question7 == true && question8 == true
       result = Info.where(size:'pequeno').or(Info.where(size:'medio').or(Info.where(size:'grande')))
-      puts result.count
+
      end
 
     if question6 && question7 == true && question8 == false
       result = Info.where(size:'pequeno').or(Info.where(size:'medio'))
-      puts result.count
+
     end
 
     if question6 == false && question7 && question8 == true
       result = Info.where(size:'medio').or(Info.where(size:'grande'))
-      puts result.count
+
     end
 
     if question6 == false && question7 == false && question8 == true
       result = Info.where(size:'grande')
-      puts result.count
+
+    end
+
+      if question6 == true && question7 == false && question8 == true
+      result = Info.where(size:'grande').or(Info.where(size:'grande'))
+
     end
 
     if question6 == false && question7 == true && question8 == false
       result = Info.where(size:'medio')
-      puts result.count
+
     end
 
     if question6 == true && question7 == false && question8 == false
        result = Info.where(size:'pequeno')
-      puts result.count
-    end
 
+    end
 
 
 
     if question1 == true
-      result = result.select {|i| i['grooming_frequency_value'] > 0}
+      result1 = result.select {|i| i['grooming_frequency_value'] > 0.4}
     else
-      result = result.select {|i| i['grooming_frequency_value'] < 0.3}
+      result1 = result.select {|i| i['grooming_frequency_value'] < 0.5}
     end
-    puts result.count
 
+     puts result1.count
 
 
     if question2 == true
-      result = result.select {|i| i['shedding_value'] > 0.5}
+      result2 = result1.select {|i| i['shedding_value'] > 0.5}
     else
-      result = result.select {|i| i['shedding_value'] > 0}
+      result2 = result1.select {|i| i['shedding_value'] > 0}
     end
-    puts result.count
+
+      puts result2.count
 
 
 
     if question3 == true
-      result = result.select {|i| i['energy_level_value'] > 0}
+      result3 = result2.select {|i| i['energy_level_value'] > 0}
     else
-      result = result.select {|i| i['energy_level_value'] < 0.5}
+      result3 = result2.select {|i| i['energy_level_value'] < 0.5}
     end
-    puts result.count
 
+      puts result3.count
 
 
     if question4 == true
-      result = result.select {|i| i['trainability_value'] > 0.4}
+      result4 = result3.select {|i| i['trainability_value'] > 0.4}
     else
-      result = result.select {|i| i['trainability_value'] < 0.5}
+      result4 = result3.select {|i| i['trainability_value'] < 0.5}
     end
-    puts result.count
+
+      puts result4.count
+
 
 
 
     if question5 == true
-      result = result.select {|i| i['demeanor_value'] > 0.5}
+      result5 = result4.select {|i| i['demeanor_value'] > 0.4}
     else
-      result = result.select {|i| i['demeanor_value'] < 1.1}
+      result5 = result4.select {|i| i['demeanor_value'] < 0.5}
     end
-    puts result.count
+
+       puts result5.count
 
 
-    @filtrado = result.sample
+
+
+    if result1.count == 0 || result1.count == nil
+            return @filtrado = result.sample
+        elsif result2.count == 0 || result2.count == nil
+            return @filtrado = result1.sample
+       elsif result3.count == 0 || result3.count == nil
+           return @filtrado = result2.sample
+         elsif result4.count == 0 || result4.count == nil
+           return @filtrado = result3.sample
+         elsif result5.count == 0 || result5.count == nil
+           return @filtrado = result4.sample
     end
+
+    @filtrado = result5.sample
+
+    end
+
 
   end
 
