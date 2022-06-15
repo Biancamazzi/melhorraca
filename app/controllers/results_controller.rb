@@ -77,9 +77,6 @@ class ResultsController < ApplicationController
       puts result.count
     end
 
-
-
-
     if question1 == true
       result = result.select {|i| i['grooming_frequency_value'] > 0}
     else
