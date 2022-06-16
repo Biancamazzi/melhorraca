@@ -2,9 +2,9 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
-# Question.destroy_all
-# Quiz.destroy_all
+
+Question.destroy_all
+Quiz.destroy_all
   Quiz.create(user_id: 1, description: "Quiz 1")
   # Create - Questions
   Question.create(
