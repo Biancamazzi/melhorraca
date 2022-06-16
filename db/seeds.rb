@@ -35,7 +35,7 @@ Quiz.all.destroy_all
   # seed with CSV file for info mode
 
  require 'csv'
-  CSV.foreach('lib/seeds/infodatabase.csv', headers: true, encoding: "UTF-8", col_sep: ';') do |row|
+  CSV.foreach('lib/seeds/infodatabase1.csv', headers: true, encoding: "UTF-8", col_sep: ';') do |row|
   Info.create(
     dog_name: row['dog_name'],
     dog_description: row['dog_description'],
