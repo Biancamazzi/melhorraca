@@ -11,8 +11,8 @@ class ResultsController < ApplicationController
     @result.user = current_user
 
     if @result.save
-      mail = UserMailer.with(@result.user).infos
-      mail.deliver_now
+      UserMailer.with(result: @result).infos.deliver_now
+
       redirect_to result_path(@result)
     else
       redirect_to questions_path, danger: "Nenhum resultado encontrado. Tente novamente"
