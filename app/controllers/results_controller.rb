@@ -13,8 +13,9 @@ class ResultsController < ApplicationController
     if @result.save
       redirect_to result_path(@result)
     else
-      render :new
+      redirect_to questions_path, danger: "Nenhum resultado encontrado. Tente novamente"
     end
+
   end
 
   def show
@@ -40,6 +41,10 @@ class ResultsController < ApplicationController
     # question8 = Answer.where(user_id: 2).where(question_id: 8).last.answer
     # question6 = Answer.where(user_id: 2).where(question_id: 6).last.answer
     # question7 = Answer.where(user_id: 2).where(question_id: 7).last.answer
+    if question6 == false && question7 == false && question8 == false
+      return @filtrado = nil
+    end
+
      if question6 == true && question7 == true && question8 == true
       result = Info.where(size:'pequeno').or(Info.where(size:'medio').or(Info.where(size:'grande')))
       puts result.count
@@ -70,19 +75,26 @@ class ResultsController < ApplicationController
       puts result.count
     end
 
+
+
+
     if question1 == true
       result = result.select {|i| i['grooming_frequency_value'] > 0}
     else
-      result = result.select {|i| i['grooming_frequency_value'] < 0.5}
+      result = result.select {|i| i['grooming_frequency_value'] < 0.3}
     end
     puts result.count
 
+
+
     if question2 == true
-      result = result.select {|i| i['shedding_value'] < 0.5}
+      result = result.select {|i| i['shedding_value'] > 0.5}
     else
       result = result.select {|i| i['shedding_value'] > 0}
     end
     puts result.count
+
+
 
     if question3 == true
       result = result.select {|i| i['energy_level_value'] > 0}
@@ -91,6 +103,8 @@ class ResultsController < ApplicationController
     end
     puts result.count
 
+
+
     if question4 == true
       result = result.select {|i| i['trainability_value'] > 0.4}
     else
@@ -98,15 +112,18 @@ class ResultsController < ApplicationController
     end
     puts result.count
 
+
+
     if question5 == true
       result = result.select {|i| i['demeanor_value'] > 0.5}
     else
-      result = result.select {|i| i['demeanor_value'] < 1.0}
+      result = result.select {|i| i['demeanor_value'] < 1.1}
     end
     puts result.count
-    puts result.sample.id
+
+
     @filtrado = result.sample
+    end
+
   end
 
-
-end
