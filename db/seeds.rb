@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-# Quiz.all.destroy_all
-# Question.all.destroy_all
+Quiz.destroy_all
+Question.destroy_all
   Quiz.create(user_id: 1, description: "Quiz 1")
   # Create - Questions
   Question.create(
