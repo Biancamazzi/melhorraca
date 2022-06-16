@@ -5,7 +5,6 @@
     <style>
       .imagem {
         padding: 20px;
-        background-color: #50CB93;
         text-align: center;
         size: 30px;
       }
@@ -38,6 +37,12 @@
         color: #54436B;
         text-shadow: none;
       }
+
+      img{
+        width: 50%;
+        border-radius: 5px;
+      }
+
     </style>
   </head>
 
@@ -51,8 +56,8 @@
       <div class="text">
         <h1> <%= @result.info.dog_name %> </h1>
           <p> <%= @result.info.dog_description %> </p>
-          <p>O Canil recomendado é o: <%= @result.info.kennel_name %> </p>
-          <p>Contato do canil: <%= @result.info.kennel_owner %> </p>
+          <p>Kennel Name: <%= @result.info.kennel_name %> </p>
+          <p>Kennel Owner: <%= @result.info.kennel_owner %> </p>
       </div>
     </div>
   </body>
