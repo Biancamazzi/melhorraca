@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      .imagem {
+        padding: 20px;
+        background-color: #50CB93;
+        text-align: center;
+        size: 30px;
+      }
+
+      .container{
+        padding: 20px;
+        margin: 20px;
+      }
+
+      .cont {
+        background-color: #54436B;
+      }
+
+      h1 {
+        font-size: 52px;
+        color:#9771c8;
+        font-family:  sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 52px;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 40px;
+        margin-top: -10px;
+        line-height: 22px;
+        color: #54436B;
+        text-shadow: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="cont">
+        <div class="imagem">
+          <%= image_tag @result.info.photo_url %>
+        </div>
+      </div>
+      <div class="text">
+        <h1> <%= @result.info.dog_name %> </h1>
+          <p> <%= @result.info.dog_description %> </p>
+          <p>O Canil recomendado é o: <%= @result.info.kennel_name %> </p>
+          <p>Contato do canil: <%= @result.info.kennel_owner %> </p>
+      </div>
+    </div>
+  </body>
+</html>

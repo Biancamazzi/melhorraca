@@ -11,6 +11,8 @@ class ResultsController < ApplicationController
     @result.user = current_user
 
     if @result.save
+      UserMailer.with(result: @result).infos.deliver_now
+
       redirect_to result_path(@result)
     else
       redirect_to questions_path, danger: "Nenhum resultado encontrado. Tente novamente"
@@ -80,8 +82,6 @@ class ResultsController < ApplicationController
 
     end
 
-
-
     if question1 == true
       result1 = result.select {|i| i['grooming_frequency_value'] > 0.4}
     else
@@ -150,4 +150,3 @@ class ResultsController < ApplicationController
 
 
   end
-
