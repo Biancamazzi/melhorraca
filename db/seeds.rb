@@ -2,9 +2,9 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
-Question.all.destroy_all
-Quiz.all.destroy_all
+
+# Quiz.destroy_all
+# Question.destroy_all
   Quiz.create(user_id: 1, description: "Quiz 1")
   # Create - Questions
   Question.create(
@@ -35,7 +35,7 @@ Quiz.all.destroy_all
   # seed with CSV file for info mode
 
  require 'csv'
-  CSV.foreach('lib/seeds/infodatabase.csv', headers: true, encoding: "UTF-8", col_sep: ';') do |row|
+  CSV.foreach('lib/seeds/infodatabase1.csv', headers: true, encoding: "UTF-8", col_sep: ';') do |row|
   Info.create(
     dog_name: row['dog_name'],
     dog_description: row['dog_description'],
