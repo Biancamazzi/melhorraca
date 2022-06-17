@@ -114,37 +114,50 @@
    *width:auto
   }
 
-  @media only screen and (max-width: 767px) {
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .result-img img {
+      max-width: 310px !important;
+    }
+    .back_blog::after {
+      max-width: 100% !important;
+      height: 300px !important;
+    }
+    .heading_s1 h3, .heading_s1 .h3 {
+      font-size: 30px !important;
+    }
+  }
 
-   .Mb\(8px\)--s {
-    margin-bottom:8px
-   }
-   .Mb\(10px\)--s {
-    margin-bottom:10px
-   }
-   .Pos\(r\)--s {
-    position:relative
-   }
-   .Ta\(c\)--s {
-    text-align:center
-   }
+  @media only screen and (max-width: 767px) {
+    .Mb\(8px\)--s {
+      margin-bottom:8px
+    }
+    .Mb\(10px\)--s {
+      margin-bottom:10px
+    }
+    .Pos\(r\)--s {
+      position:relative
+    }
+    .Ta\(c\)--s {
+      text-align:center
+    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1400px) {
-   .Ta\(c\)--ltxl {
-    text-align:center
-   }
+    .Ta\(c\)--ltxl {
+      text-align:center
+    }
   }
   @media only screen and (min-width: 768px) {
-   .Mb\(8px\)--ml {
-    margin-bottom:8px
-   }
-   .Pos\(r\)--ml {
-    position:relative
-   }
-   .Ta\(c\)--ml {
-    text-align:center
-   }
+    .Mb\(8px\)--ml {
+      margin-bottom:8px
+    }
+    .Pos\(r\)--ml {
+      position:relative
+    }
+    .Ta\(c\)--ml {
+      text-align:center
+    }
   }
 @-webkit-keyframes logoAnimation {
   50% {
@@ -191,15 +204,14 @@
 }
 
 .back_blog::after {
-  width: 545px;
+  max-width: 545px;
   position: absolute;
   height: 575px;
   content: "";
   right: -50px;
   top: -65px;
   box-shadow: 0 0 60px -10px rgba(0,0,0,.15);
-  background:
-  #50CB93;
+  background: #50CB93;
 }
 
 .back_blog img {
@@ -266,7 +278,7 @@
 }
 
 .result-img img{
-  width: 545px;
+  max-width: 545px;
   border-radius: 3px;
   z-index: 1;
 }
